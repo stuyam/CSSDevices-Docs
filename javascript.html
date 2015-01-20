@@ -62,7 +62,7 @@
       <hr>
       <h2>Smart Image Loader</h2>
       <p>
-        Adding <span class="b">cd-smart-loader</span> to the <span class="i">cd-screen</span> element of your device, it will wait for the first element in the screen to finish loading and then fade it in. <span class="b">Note:</span> only built for &lt;img&gt; loading for now, untested with &lt;video&gt; and &lt;iframe&gt;. It fades in at 250 milliseconds by default.
+        Adding the class <span class="b">cd-smart-loader</span> to the <span class="i">cd-screen</span> element of your device, it will wait for the first element in the screen to finish loading and then fade it in. <span class="b">Note:</span> only built for &lt;img&gt; loading for now, untested with &lt;video&gt; and &lt;iframe&gt;. It fades in at 250 milliseconds by default.
       </p>
       <pre><code class="language-markup">...
   &lt;div class="cd-screen cd-smart-loader"&gt;
@@ -114,10 +114,34 @@
 
       <hr>
       <h2>Device Fill Parent Element</h2>
+      <p>
+        By adding the class <span class="b">cd-fill-parent</span> to the top level element of your device, it will set the width of the element to the width of it's parent. This is GREAT for responsive websites. <span class="b">Hint:</span> Add the <span class="b">cd-padded-device</span> helper to this to keep a 20px margin around the device.
+      </p>
+      <pre><code class="language-markup">&lt;div class="cd-iphone-6 cd-fill-parent"&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
+      <div class="alert alert-warning">
+        <span class="b">Note!</span> The device fades in when using this to eleviate a different sized device to flash on the screen before the JS runs. You can use the <span class="b">data-fade-in-speed</span> property to adjust the 250 millisecond fade in.
+      </div>
 
       <hr>
       <h2>Device Fade In</h2>
-
+      <p>
+        By adding the class <span class="b">cd-device-loader</span> to the top level element of your device, it will fade in the device on page load. By default it fades in a 250 milliseconds.
+      </p>
+      <pre><code class="language-markup">&lt;div class="cd-iphone-6 cd-device-loader"&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
+      <h3>Options:</h3>
+      <p>
+        You can use the <span class="b">data-fade-in-speed</span> property to adjust the device fade in speed in milliseconds. The example fades the device in over the course of 2 seconds.
+      </p>
+      <pre><code class="language-markup">&lt;div class="cd-iphone-6 cd-device-loader" data-fade-in-speed="2000"&gt;
+  ...
+&lt;/div&gt;
+</code></pre>
 
       <hr>
       <footer>
