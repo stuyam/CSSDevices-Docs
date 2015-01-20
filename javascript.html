@@ -57,7 +57,68 @@
 
     <div class="container helpers">
       <h1>Javascript</h1>
-      coming very very soon!
+      <div class="alert alert-warning">Make sure to check <a href="/setup.html">setup</a> on how to setup JS on your site</div>
+
+      <hr>
+      <h2>Smart Image Loader</h2>
+      <p>
+        Adding <span class="b">cd-smart-loader</span> to the <span class="i">cd-screen</span> element of your device, it will wait for the first element in the screen to finish loading and then fade it in. <span class="b">Note:</span> only built for &lt;img&gt; loading for now, untested with &lt;video&gt; and &lt;iframe&gt;. It fades in at 250 milliseconds by default.
+      </p>
+      <pre><code class="language-markup">...
+  &lt;div class="cd-screen cd-smart-loader"&gt;
+    &lt;img src="img/source.png"&gt;
+  &lt;/div&gt;
+...
+</code></pre>
+      <h3>Options:</h3>
+      <p>
+        You can specify the speed at which you want the element to fade in once it has loaded by adding the <span class="b">data-fade-in-speed</span> property to the <span class="i">cd-screen</span> element. <span class="b">Note:</span> The value is the time in milliseconds. The example below fades the image in over the course of 5 seconds.
+      </p>
+      <pre><code class="language-markup">...
+  &lt;div class="cd-screen cd-smart-loader" data-fade-in-speed="5000"&gt;
+    &lt;img src="img/source.png"&gt;
+  &lt;/div&gt;
+...
+</code></pre>
+
+      <hr>
+      <h2>Automatic Slideshow</h2>
+      <p>
+        The automatic slideshow will fade between the elements of the device automatically <span class="b">if</span> there are more than 1 elements in the <span class="i">cd-screen</span>. <span class="b">Tip:</span> You can fade between any elements as long as they are a child of the <span class="i">cd-screen</span>. It waits on each page for 5 seconds and fades between them for 1 second by default.
+      </p>
+      <pre><code class="language-markup">...
+  &lt;div class="cd-screen"&gt;
+    &lt;img src="img/source.png"&gt;
+    &lt;img src="img/source1.png"&gt;
+    &lt;img src="img/source2.png"&gt;
+    &lt;div&gt;This is text that is in the screen!&lt;/div&gt;
+  &lt;/div&gt;
+...
+</code></pre>
+      <h3>Options:</h3>
+      <p>
+        You can control the speed at which you want the element to fade and how long to stay on each element using the <span class="b">data-fade-speed</span> and <span class="b">data-page-speed</span> properties to the <span class="i">cd-screen</span> element. <span class="b">Note:</span> The value is the time in milliseconds.
+      </p>
+      <pre><code class="language-markup">...
+  &lt;div class="cd-screen" data-page-speed="3400" data-fade-speed="750"&gt;
+    &lt;img src="img/source.png"&gt;
+    &lt;img src="img/source1.png"&gt;
+    &lt;img src="img/source2.png"&gt;
+    &lt;div&gt;This is text that is in the screen!&lt;/div&gt;
+  &lt;/div&gt;
+...
+</code></pre>
+      <div class="alert alert-success">
+        If you have multiple elements in your screen and do NOT want them to automatically slideshow, you can add the class <span class="b">cd-no-slideshow</span> to the <span class="i">cd-screen</span> element.
+      </div>
+
+      <hr>
+      <h2>Device Fill Parent Element</h2>
+
+      <hr>
+      <h2>Device Fade In</h2>
+
+
       <hr>
       <footer>
         <h3 class="c">This project is maintained by <a href="https://github.com/Yamartino">Stuart Yamartino</a></h3>
