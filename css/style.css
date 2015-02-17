@@ -58,6 +58,10 @@ nav.navbar .container{
   padding: 0 30px !important;
 }
 
+.navbar-right > li{
+  display: none;
+}
+
 .navbar-inverse .navbar-brand{
   color: white;
   font-weight: 300;
