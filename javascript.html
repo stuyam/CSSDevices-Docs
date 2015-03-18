@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/devices.min.css" />
     <script src="//use.typekit.net/jxs1doh.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
+    <meta name="description" content="CSSDevices is a library of Apple devices built in pure CSS. They are robust and have an accompanying javascript package that allows easy slideshowing and image loading. Devices include iPhone 6, iPhone 6 Plus, iPhone 5s, iPhone 5c, iPad Air, MacBook Air, MacBook Pro, and all of the Apple Watches." />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -96,10 +97,22 @@
 </code></pre>
       <h3>Options:</h3>
       <p>
-        You can control the speed at which you want the element to fade and how long to stay on each element using the <span class="b">data-fade-speed</span> and <span class="b">data-page-speed</span> properties to the <span class="i">cd-screen</span> element. <span class="b">Note:</span> The value is the time in milliseconds.
+        You can use a slider animation for your slideshow by giving the <span class="b">cd-screen</span> element the class <span class="b">cd-transition-slider</span>.
       </p>
       <pre><code class="language-markup">...
-  &lt;div class="cd-screen" data-page-speed="3400" data-fade-speed="750"&gt;
+  &lt;div class="cd-screen cd-transition-slider"&gt;
+    &lt;img src="img/source.png"&gt;
+    &lt;img src="img/source1.png"&gt;
+    &lt;img src="img/source2.png"&gt;
+    &lt;div&gt;This is text that is in the screen!&lt;/div&gt;
+  &lt;/div&gt;
+...
+</code></pre>
+      <p>
+        You can control the speed at which you want the element to fade and how long to stay on each element using the <span class="b">data-transition-speed</span> and <span class="b">data-pause-speed</span> properties to the <span class="i">cd-screen</span> element. <span class="b">Note:</span> The value is the time in milliseconds.
+      </p>
+      <pre><code class="language-markup">...
+  &lt;div class="cd-screen" data-pause-speed="3400" data-transition-speed="750"&gt;
     &lt;img src="img/source.png"&gt;
     &lt;img src="img/source1.png"&gt;
     &lt;img src="img/source2.png"&gt;
