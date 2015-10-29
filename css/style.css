@@ -73,6 +73,10 @@ nav.navbar .container{
   border: none;
 }
 
+.gitter-open-chat-button:hover{
+  text-decoration: none;
+}
+
 h1{
   font-size: 55px;
   font-weight: 300;
