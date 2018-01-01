@@ -1,5 +1,5 @@
 body{
-  font-family: "myriad-pro",sans-serif !important;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 nav.navbar{
@@ -15,7 +15,7 @@ nav.navbar .container{
 
 .navbar .nav>li>a{
   padding: 13px 30px 15px 30px;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 16px;
   letter-spacing: .5px;
   font-weight: 300;
